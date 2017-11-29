@@ -2,6 +2,7 @@
 /**
  * Plugin Name: Hogan Module: Expandable List
  * Plugin URI: https://github.com/dekodeinteraktiv/hogan-expandable-list
+ * GitHub Plugin URI: https://github.com/dekodeinteraktiv/hogan-expandable-list
  * Description: Expandable List Module for Hogan
  * Version: 1.0.0
  * Author: Dekode
