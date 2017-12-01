@@ -21,6 +21,11 @@
     transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
 }
 
+.hogan-module-expandable_list .hogan-expandable-list-item > a.active span {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 .hogan-module-expandable_list .hogan-expandable-list-item > a span::before, .hogan-module-expandable_list .hogan-expandable-list-item > a span::after {
     display: block;
     content: " ";
