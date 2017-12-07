@@ -5,6 +5,7 @@
  * @package Hogan
  */
 
+declare( strict_types = 1 );
 namespace Dekode\Hogan;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,9 +24,15 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 		/**
 		 * List of expandable items.
 		 *
-		 * @var $items
+		 * @var array $items
 		 */
 		public $list_items;
+
+		/**
+		 * Module index in flexible layout
+		 *
+		 * @var int $counter
+		 */
 		public $counter;
 
 		/**
@@ -45,8 +52,10 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 
 		/**
 		 * Field definitions for module.
+		 *
+		 * @return array $fields Fields for this module
 		 */
-		public function get_fields() {
+		public function get_fields() : array {
 
 			$fields = [];
 
@@ -106,31 +115,27 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 		}
 
 		/**
-		 * Map fields to object variable.
+		 * Map raw fields from acf to object variable.
 		 *
-		 * @param array $content The content value.
+		 * @param array $raw_content Content values.
+		 * @param int   $counter Module location in page layout.
+		 * @return void
 		 */
-		public function load_args_from_layout_content( $content ) {
-			$this->heading    = $content['heading'] ?? null;
-			$this->list_items = $content['list_items'];
+		public function load_args_from_layout_content( array $raw_content, int $counter = 0 ) {
 
-			parent::load_args_from_layout_content( $content );
+			$this->list_items = $raw_content['list_items'];
+			$this->counter = $counter;
+
+			parent::load_args_from_layout_content( $raw_content, $counter );
 		}
 
 		/**
 		 * Validate module content before template is loaded.
+		 *
+		 * @return bool Whether validation of the module is successful / filled with content.
 		 */
-		public function validate_args() {
+		public function validate_args() : bool {
 			return ! empty( $this->list_items );
-		}
-
-		/*public function render_template( $raw_content, $counter = 0, $echo = true ) {
-			parent::load_args_from_layout_content( $raw_content, $counter, $echo );
-		}*/
-
-		protected function render_opening_template_wrappers( $counter = 0 ) {
-			$this->counter = $counter;
-			parent::render_opening_template_wrappers( $counter );
 		}
 	}
 }
