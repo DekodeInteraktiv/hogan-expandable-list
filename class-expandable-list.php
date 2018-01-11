@@ -79,7 +79,17 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'key'          => $this->field_key . '_item_title',
 							'label'        => esc_html__( 'Title', 'hogan-expandable-list' ),
 							'name'         => 'item_title',
+							'required'     => true,
 							'instructions' => esc_html__( 'Add list item title', 'hogan-expandable-list' ),
+						],
+						[
+							'key'          => $this->field_key . '_item_accordion',
+							'label'        => '',
+							'type'         => 'accordion',
+							'instructions' => __( 'Click to open/close item', 'hogan-expandable-list' ),
+							'open'         => 1,
+							'multi_expand' => 0,
+							'endpoint'     => 0,
 						],
 						[
 							'type'         => 'wysiwyg',
@@ -90,7 +100,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'delay'        => false,
 							'required'     => true,
 							'tabs'         => apply_filters( 'hogan/module/expandable_list/content/tabs', 'all' ),
-							'media_upload' => 0,
+							'media_upload' => apply_filters( 'hogan/module/expandable_list/content/media', 0 ),
 							'toolbar'      => apply_filters( 'hogan/module/expandable_list/content/toolbar', 'hogan_caption' ),
 						],
 					],
@@ -124,7 +134,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 		public function load_args_from_layout_content( array $raw_content, int $counter = 0 ) {
 
 			$this->list_items = $raw_content['list_items'];
-			$this->counter = $counter;
+			$this->counter    = $counter;
 
 			parent::load_args_from_layout_content( $raw_content, $counter );
 		}
