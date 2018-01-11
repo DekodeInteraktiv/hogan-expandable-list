@@ -8,3 +8,16 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-expan
 
 ## Available filters
 
+- `hogan/module/expandable_list/list_item_classes`
+- `hogan/module/expandable_list/load_styles`
+- `hogan/module/expandable_list/load_scripts`
+
+- `hogan/module/expandable_list/content/media` - allow/disallow media upload button in list item wysiwyg. Default 0.
+- `hogan/module/expandable_list/content/tabs` - change what tabs are shown for list item wysiwyg. Default 'all'.
+- `hogan/module/expandable_list/content/toolbar` - customize toolbar for expandable list item wysiwyg. Default 'hogan_caption' from Hogan Core.
+
+## Changelog
+### 1.0.4
+- title field is required
+- added accordion field to admin layout
+- added filter for media upload button in wysiwyg field

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Expandable List\n"
-"POT-Creation-Date: 2017-12-07 12:56+0100\n"
-"PO-Revision-Date: 2017-12-07 12:56+0100\n"
+"POT-Creation-Date: 2018-01-11 08:59+0100\n"
+"PO-Revision-Date: 2018-01-11 09:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -41,15 +41,19 @@ msgstr "Legg til element"
 msgid "Title"
 msgstr "Tittel"
 
-#: class-expandable-list.php:82
+#: class-expandable-list.php:83
 msgid "Add list item title"
 msgstr "Legg til tittel for elementet"
 
-#: class-expandable-list.php:88
+#: class-expandable-list.php:89
+msgid "Click to open/close item"
+msgstr "Klikk for å vise/skjule innhold"
+
+#: class-expandable-list.php:98
 msgid "Expandable content"
 msgstr "Ekspanderende innhold"
 
-#: class-expandable-list.php:89
+#: class-expandable-list.php:99
 msgid "Add list item expandable content"
 msgstr "Legg til ekspanderende innhold"
 
