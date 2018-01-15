@@ -43,10 +43,6 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 			$this->label    = __( 'Expandable List', 'hogan-expandable-list' );
 			$this->template = __DIR__ . '/assets/template.php';
 
-			if ( true === apply_filters( 'hogan/module/expandable_list/load_assets', true ) ) {
-				add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_assets' ] );
-			}
-
 			parent::__construct();
 		}
 
