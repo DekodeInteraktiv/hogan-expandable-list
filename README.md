@@ -17,6 +17,9 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-expan
 - `hogan/module/expandable_list/content/toolbar` - customize toolbar for expandable list item wysiwyg. Default 'hogan_caption' from Hogan Core.
 
 ## Changelog
+### master
+- Heading classname changed from `.heading` to `.hogan-heading`.
+
 ### 1.0.4
 - title field is required
 - added accordion field to admin layout
