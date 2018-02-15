@@ -19,12 +19,6 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Expandable_List ) ) {
 	return; // Exit if accessed directly.
 }
 
-if ( ! empty( $this->heading ) ) {
-	hogan_component( 'heading', [
-		'title' => $this->heading,
-	] );
-}
-
 foreach ( $this->list_items as $key => $item ) :
 
 	$list_item_classes = array_merge(
