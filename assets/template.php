@@ -5,7 +5,6 @@
  * $this is an instance of the Expandable_List object.
  *
  * Available properties:
- * $this->heading (string) Module heading.
  * $this->list_items (array) Items with title and content for each item in the list.
  * $this->counter (int) Module index in flexible layout.
  *
