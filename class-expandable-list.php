@@ -99,7 +99,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'toolbar'      => apply_filters( 'hogan/module/expandable_list/content/toolbar', 'hogan_caption' ),
 						],
 					],
-				]
+				],
 			];
 
 			return $fields;
