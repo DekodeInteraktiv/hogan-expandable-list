@@ -57,12 +57,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 		 */
 		public function get_fields() : array {
 
-			$fields = [];
-
-			// Heading field can be disabled using filter hogan/module/expandable_list/heading/enabled (true/false).
-			hogan_append_heading_field( $fields, $this );
-
-			$fields[] =
+			$fields = [
 				[
 					'type'         => 'repeater',
 					'key'          => $this->field_key . '_list_items',
@@ -104,7 +99,8 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'toolbar'      => apply_filters( 'hogan/module/expandable_list/content/toolbar', 'hogan_caption' ),
 						],
 					],
-				];
+				],
+			];
 
 			return $fields;
 		}
