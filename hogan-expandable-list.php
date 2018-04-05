@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\hogan_load_textdomain' );
-add_action( 'hogan/include_modules', __NAMESPACE__ . '\\register_module' );
+add_action( 'hogan/include_modules', __NAMESPACE__ . '\\register_module', 10, 1 );
 
 /**
  * Register module text domain
