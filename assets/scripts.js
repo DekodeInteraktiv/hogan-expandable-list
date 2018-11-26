@@ -19,5 +19,9 @@
 
 	for ( var i = 0; i < itemLinks.length; i++ ) {
 		itemLinks[ i ].onclick = listItemClicked;
+
+		if ( window.location.hash !== '' && itemLinks[i].getAttribute( 'href' ) === window.location.hash ) {
+			itemLinks[ i ].click();
+		}
 	}
 })();
