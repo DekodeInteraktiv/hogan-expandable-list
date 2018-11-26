@@ -1,18 +1,27 @@
 (function () {
-	var itemLinks = document.querySelectorAll('.hogan-expandable-list-item > a'),
-		i, len = itemLinks.length;
 
-	for (i = 0; i < len; i++) {
-		itemLinks[i].onclick = function (evt) {
-			evt.preventDefault();
-			var panel = this.nextElementSibling;
-			this.classList.toggle('active');
-			panel.setAttribute("aria-expanded", this.classList.contains('active').toString());
-			if (this.classList.contains('active')) {
-				panel.style.maxHeight = panel.scrollHeight + 'px';
-			} else {
-				panel.style.maxHeight = '0';
-			}
+	/**
+	 * List item click handler.
+	 */
+	function listItemClicked( event ) {
+		event.preventDefault();
+
+		// Toggle item trigger active state.
+		this.classList.toggle( 'active' );
+
+		// Toggle item panel active state.
+		var panel = this.nextElementSibling;
+		panel.setAttribute( 'aria-expanded', this.classList.contains( 'active' ).toString() );
+		panel.style.maxHeight = this.classList.contains( 'active' ) ? panel.scrollHeight + 'px' : '0';
+	};
+
+	var itemLinks = document.querySelectorAll( '.hogan-expandable-list-item > a' );
+
+	for ( var i = 0; i < itemLinks.length; i++ ) {
+		itemLinks[ i ].onclick = listItemClicked;
+
+		if ( window.location.hash !== '' && itemLinks[i].getAttribute( 'href' ) === window.location.hash ) {
+			itemLinks[ i ].click();
 		}
 	}
 })();
