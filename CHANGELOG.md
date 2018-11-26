@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.3]
+- Add function for opening item by url hash. [PR #8](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/8)
+
 ## [1.1.2]
 - Update module to new registration method introduced in [Hogan Core 1.1.7](https://github.com/DekodeInteraktiv/hogan-core/releases/tag/1.1.7)
 - Set hogan-core dependency `"dekodeinteraktiv/hogan-core": ">=1.1.7"`
