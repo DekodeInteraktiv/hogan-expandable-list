@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.4]
+- Output content without wp_kses_post(). [PR #11](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/11)
+
 ## [1.1.3]
 - Add function for opening item by url hash. [PR #8](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/8)
 
