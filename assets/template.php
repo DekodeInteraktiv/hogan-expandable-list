@@ -30,7 +30,7 @@ foreach ( $this->list_items as $key => $item ) :
 	<div class="<?php echo esc_attr( $list_item_classes ); ?>">
 		<a href="#<?php echo esc_attr( $list_item_id ); ?>"><?php echo esc_html( $item['item_title'] ); ?><span></span></a>
 		<div id="<?php echo esc_attr( $list_item_id ); ?>" aria-expanded="false">
-			<?php echo wp_kses_post( $item['item_content'] ); ?>
+			<?php echo $item['item_content']; // WPCS: XSS OK. ?>
 		</div>
 	</div>
 <?php endforeach; ?>
