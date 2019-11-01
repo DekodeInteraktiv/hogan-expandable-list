@@ -94,6 +94,13 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'media_upload' => apply_filters( 'hogan/module/expandable_list/content/media', 0 ),
 							'toolbar'      => apply_filters( 'hogan/module/expandable_list/content/toolbar', 'hogan_caption' ),
 						],
+						[
+							'type'         => 'text',
+							'key'          => $this->field_key . '_item_id',
+							'label'        => __( 'Optional item name', 'hogan-expandable-list' ),
+							'name'         => 'item_id',
+							'instructions' => __( 'Set a fixed item name so you can link directly to a open item.', 'hogan-expandable-list' ),
+						],
 					],
 				],
 			];

@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\hogan_load_textdomain' );
 add_action( 'hogan/include_modules', __NAMESPACE__ . '\\register_module', 10, 1 );
+add_filter( 'acf/update_value/key=hogan_module_expandable_list_item_id', __NAMESPACE__ . '\\sanitize_item_id_on_save', 10, 3 );
 
 /**
  * Register module text domain
@@ -43,4 +44,8 @@ function hogan_load_textdomain() {
 function register_module( \Dekode\Hogan\Core $core ) {
 	require_once 'class-expandable-list.php';
 	$core->register_module( new \Dekode\Hogan\Expandable_List() );
+}
+
+function sanitize_item_id_on_save( string $value, int $id, array $field ) : string {
+	return sanitize_title( $value );
 }
