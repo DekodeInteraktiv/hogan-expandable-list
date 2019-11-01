@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.5]
+- Add custom item name option. [PR #13](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/13)
+
 ## [1.1.4]
 - Output content without wp_kses_post(). [PR #11](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/11)
 
