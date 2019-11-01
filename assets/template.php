@@ -25,7 +25,7 @@ foreach ( $this->list_items as $key => $item ) :
 		apply_filters( 'hogan/module/expandable_list/list_item_classes', [], $this )
 	);
 	$list_item_classes = trim( implode( ' ', array_filter( $list_item_classes ) ) );
-	$list_item_id      = 'panel-' . $this->counter . '-' . $key;
+	$list_item_id      = ! empty( $item['item_id'] ) ? $item['item_id'] : 'panel-' . $this->counter . '-' . $key;
 	?>
 	<div class="<?php echo esc_attr( $list_item_classes ); ?>">
 		<a href="#<?php echo esc_attr( $list_item_id ); ?>"><?php echo esc_html( $item['item_title'] ); ?><span></span></a>
