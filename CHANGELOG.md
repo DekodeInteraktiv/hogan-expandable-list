@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.6]
+- Add option for offsetting list item anchor. [PR #15](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/15)
+
 ## [1.1.5]
 - Add custom item name option. [PR #13](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/13)
 
