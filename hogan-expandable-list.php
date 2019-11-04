@@ -49,9 +49,9 @@ function register_module( \Dekode\Hogan\Core $core ) {
 /**
  * Sanitize item id name to URL friendly string.
  *
- * @param string $value Item name.
+ * @param string  $value Item name.
  * @param integer $id Item id.
- * @param array $field
+ * @param array   $field Sanitized item name.
  * @return string
  */
 function sanitize_item_id_on_save( string $value, int $id, array $field ) : string {
