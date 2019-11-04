@@ -1,7 +1,17 @@
+.hogan-module-expandable_list .hogan-expandable-list-item {
+	position: relative;
+}
+
 .hogan-module-expandable_list .hogan-expandable-list-item > a {
 	display: block;
 	position: relative;
 	padding-right: 30px;
+}
+
+.hogan-module-expandable_list .hogan-expandable-list-item > .anchor {
+	position: absolute;
+	width: 0;
+	padding: 0;
 }
 
 .hogan-module-expandable_list .hogan-expandable-list-item > a span {
