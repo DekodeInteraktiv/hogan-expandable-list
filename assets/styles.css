@@ -8,7 +8,7 @@
 	padding-right: 30px;
 }
 
-.hogan-module-expandable_list .hogan-expandable-list-item > a.anchor {
+.hogan-module-expandable_list .hogan-expandable-list-item > .anchor {
 	position: absolute;
 	width: 0;
 	padding: 0;
