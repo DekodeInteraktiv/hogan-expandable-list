@@ -28,8 +28,9 @@ foreach ( $this->list_items as $key => $item ) :
 	$list_item_id      = ! empty( $item['item_id'] ) ? $item['item_id'] : 'panel-' . $this->counter . '-' . $key;
 	?>
 	<div class="<?php echo esc_attr( $list_item_classes ); ?>">
+		<a class="anchor" name="<?php echo esc_attr( $list_item_id ); ?>">&nbsp;</a>
 		<a href="#<?php echo esc_attr( $list_item_id ); ?>"><?php echo esc_html( $item['item_title'] ); ?><span></span></a>
-		<div id="<?php echo esc_attr( $list_item_id ); ?>" aria-expanded="false">
+		<div aria-expanded="false">
 			<?php echo $item['item_content']; // WPCS: XSS OK. ?>
 		</div>
 	</div>
