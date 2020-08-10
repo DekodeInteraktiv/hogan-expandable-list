@@ -70,7 +70,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'key'           => $this->field_key . '_item_thumbnail_id',
 							'name'          => 'item_thumbnail_id',
 							'label'         => __( 'Thumbnail', 'hogan-expandable-list' ),
-							'instructions' => __( 'Add thumbnail next to list item title', 'hogan-expandable-list' ),
+							'instructions'  => __( 'Add thumbnail next to list item title', 'hogan-expandable-list' ),
 							'required'      => false,
 							'return_format' => 'id',
 							'preview_size'  => 'thumbnail',
@@ -86,7 +86,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 							'name'         => 'item_title',
 							'required'     => true,
 							'instructions' => __( 'Add list item title', 'hogan-expandable-list' ),
-							'wrapper'       => [
+							'wrapper'      => [
 								'width' => '70',
 							],
 						],
