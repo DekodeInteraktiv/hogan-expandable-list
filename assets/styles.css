@@ -10,8 +10,24 @@
 
 .hogan-module-expandable_list .hogan-expandable-list-item > .anchor {
 	position: absolute;
-	width: 0;
 	padding: 0;
+	width: 0;
+}
+
+.hogan-module-expandable_list .hogan-expandable-list-item > a img {
+	height: 94%;
+	left: 3px;
+	max-height: 60px;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.hogan-module-expandable_list .hogan-expandable-list-item > a img + .hogan-expandable-list-item-title {
+	margin-left: 52px;
 }
 
 .hogan-module-expandable_list .hogan-expandable-list-item > a span {

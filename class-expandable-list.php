@@ -66,12 +66,29 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 					'button_label' => __( 'Add item', 'hogan-expandable-list' ),
 					'sub_fields'   => [
 						[
+							'type'          => 'image',
+							'key'           => $this->field_key . '_item_thumbnail_id',
+							'name'          => 'item_thumbnail_id',
+							'label'         => __( 'Thumbnail', 'hogan-expandable-list' ),
+							'instructions' => __( 'Add thumbnail next to list item title', 'hogan-expandable-list' ),
+							'required'      => false,
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'wrapper'       => [
+								'width' => '30',
+							],
+						],
+						[
 							'type'         => 'text',
 							'key'          => $this->field_key . '_item_title',
 							'label'        => __( 'Title', 'hogan-expandable-list' ),
 							'name'         => 'item_title',
 							'required'     => true,
 							'instructions' => __( 'Add list item title', 'hogan-expandable-list' ),
+							'wrapper'       => [
+								'width' => '70',
+							],
 						],
 						[
 							'key'          => $this->field_key . '_item_accordion',

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Expandable List\n"
-"POT-Creation-Date: 2018-01-11 08:59+0100\n"
-"PO-Revision-Date: 2018-01-11 09:00+0100\n"
+"POT-Creation-Date: 2020-08-10 14:41+0200\n"
+"PO-Revision-Date: 2020-08-10 14:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -20,42 +20,60 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: wp-content\n"
 
 #: class-expandable-list.php:43
 msgid "Expandable List"
 msgstr "Ekspanderende liste"
 
-#: class-expandable-list.php:69
+#: class-expandable-list.php:60
 msgid "List Items"
 msgstr "Elementer"
 
-#: class-expandable-list.php:71
+#: class-expandable-list.php:62
 msgid "Create a list of expandable items"
 msgstr "Lag en liste av ekspanderende elementer"
 
-#: class-expandable-list.php:75
+#: class-expandable-list.php:66
 msgid "Add item"
 msgstr "Legg til element"
 
-#: class-expandable-list.php:80
+#: class-expandable-list.php:72
+msgid "Thumbnail"
+msgstr "Miniatyrbilde"
+
+#: class-expandable-list.php:73
+msgid "Add thumbnail next to list item title"
+msgstr "Legge til miniatyrbilde ved siden av tittel"
+
+#: class-expandable-list.php:85
 msgid "Title"
 msgstr "Tittel"
 
-#: class-expandable-list.php:83
+#: class-expandable-list.php:88
 msgid "Add list item title"
 msgstr "Legg til tittel for elementet"
 
-#: class-expandable-list.php:89
+#: class-expandable-list.php:97
 msgid "Click to open/close item"
 msgstr "Klikk for å vise/skjule innhold"
 
-#: class-expandable-list.php:98
+#: class-expandable-list.php:106
 msgid "Expandable content"
 msgstr "Ekspanderende innhold"
 
-#: class-expandable-list.php:99
+#: class-expandable-list.php:107
 msgid "Add list item expandable content"
 msgstr "Legg til ekspanderende innhold"
+
+#: class-expandable-list.php:117
+msgid "Optional item name"
+msgstr "Valgfritt elementnavn"
+
+#: class-expandable-list.php:119
+msgid "Set a fixed item name so you can link directly to a open item."
+msgstr ""
+"Angi et fast elementnavn, slik at du kan koble direkte til et åpent element."
 
 #. Plugin Name of the plugin/theme
 msgid "Hogan Module: Expandable List"
