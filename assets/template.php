@@ -29,7 +29,15 @@ foreach ( $this->list_items as $key => $item ) :
 	?>
 	<div class="<?php echo esc_attr( $list_item_classes ); ?>">
 		<div class="anchor" id="<?php echo esc_attr( $list_item_id ); ?>">&nbsp;</div>
-		<a href="#<?php echo esc_attr( $list_item_id ); ?>"><?php echo esc_html( $item['item_title'] ); ?><span></span></a>
+		<a href="#<?php echo esc_attr( $list_item_id ); ?>">
+			<?php
+			if ( ! empty( $item['item_thumbnail_id'] ) ) {
+				echo wp_get_attachment_image( $item['item_thumbnail_id'] );
+			}
+			printf( '<div class="hogan-expandable-list-item-title">%s</div>', esc_html( $item['item_title'] ) );
+			?>
+			<span></span>
+		</a>
 		<div aria-expanded="false">
 			<?php echo $item['item_content']; // WPCS: XSS OK. ?>
 		</div>

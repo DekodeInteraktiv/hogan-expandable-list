@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.0]
+- Add option for thumbnail next to title.
+
 ## [1.1.6]
 - Add option for offsetting list item anchor. [PR #15](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/15)
 
