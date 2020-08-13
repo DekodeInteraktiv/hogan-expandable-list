@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.1]
+- Added plugin version number to asset loading to fix cached asset versions. [PR #17](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/17)
+
 ## [1.2.0]
 - Add option for thumbnail next to title. [PR #16](https://github.com/DekodeInteraktiv/hogan-expandable-list/pull/16)
 
