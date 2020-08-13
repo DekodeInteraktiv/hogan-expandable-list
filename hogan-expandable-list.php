@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/dekodeinteraktiv/hogan-expandable-list
  * GitHub Plugin URI: https://github.com/dekodeinteraktiv/hogan-expandable-list
  * Description: Expandable List Module for Hogan
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Dekode
  * Author URI: https://dekode.no
  * License: GPL-3.0
@@ -23,6 +23,8 @@ namespace Dekode\Hogan\Expandable_List;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+define( 'HOGAN_EXPANDABLE_LIST_VERSION', '1.2.1' );
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\hogan_load_textdomain' );
 add_action( 'hogan/include_modules', __NAMESPACE__ . '\\register_module', 10, 1 );

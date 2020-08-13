@@ -130,7 +130,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Expandable_List' ) && class_exists( '\\De
 		 */
 		public function enqueue_assets() {
 
-			$_version = defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? time() : false;
+			$_version = defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? time() : HOGAN_EXPANDABLE_LIST_VERSION;
 			if ( true === apply_filters( 'hogan/module/expandable_list/load_styles', true ) ) {
 				wp_enqueue_style( 'hogan-expandable-list-styles', plugins_url( '/assets/styles.css', __FILE__ ), [], $_version );
 			}
