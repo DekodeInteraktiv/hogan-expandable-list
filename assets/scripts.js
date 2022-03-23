@@ -12,7 +12,7 @@
 		// Toggle item panel active state.
 		var panel = this.nextElementSibling;
 		panel.setAttribute( 'aria-expanded', this.classList.contains( 'active' ).toString() );
-		panel.style.maxHeight = this.classList.contains( 'active' ) ? panel.scrollHeight + 'px' : '0';
+		panel.style.maxHeight = this.classList.contains( 'active' ) ? 'initial' : '0';
 	};
 
 	var itemLinks = document.querySelectorAll( '.hogan-expandable-list-item > a' );
